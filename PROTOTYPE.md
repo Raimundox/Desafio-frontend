@@ -3,7 +3,7 @@
 Ferramenta: Figma.
 
 Link do arquivo:
-- 
+- https://www.figma.com/design/4jTfeGCyX9WYQWmKqaBmLd/Desafio-front-end?node-id=0-1&t=Y4dDUoSchHBM2Chj-1
 
 Notas de UI:
 - Paleta: vermelho principal (#E5252A), fundo claro/escuro, cinzas neutros.
