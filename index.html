@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simplifit - Página Inicial</title>
+  <meta name="description" content="Desafio Front-End - Grupo Idealnet. Landing responsiva com tema Simplifit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="theme-light">
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Simplifit Home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text">Simplifit</span>
+      </a>
+
+      <button class="menuToggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Principal">
+        <ul>
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" aria-label="Alterar tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="icon icon-sun">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-title">Sua melhor versão começa hoje</h1>
+        <p class="hero-subtitle">Treine com estrutura moderna, planos flexíveis e unidades abertas 24h. Venha para a
+          Simplifit.</p>
+        <a href="#servicos" class="btn btn-primary">Ver planos e modalidades</a>
+      </div>
+      <div class="hero-media">
+        <div class="slider" data-auto="5000" aria-roledescription="carousel" aria-label="Galeria de Unidades">
+          <button class="slider-btn prev" aria-label="Slide anterior">‹</button>
+          <div class="slides">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop"
+              alt="Academia com halteres" />
+            <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?q=80&w=1600&auto=format&fit=crop"
+              alt="Esteiras modernas" />
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600&auto=format&fit=crop"
+              alt="Área de musculação" />
+          </div>
+          <button class="slider-btn next" aria-label="Próximo slide">›</button>
+          <div class="slider-dots" role="tablist" aria-label="Seleção de slides"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <h2 class="section-title">Nossas Modalidades</h2>
+      <div class="cards">
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="Área de musculação com halteres" />
+          <h3>Musculação</h3>
+          <p>Equipamentos de última geração e acompanhamento para todos os níveis.</p>
+        </article>
+        <article class="card">
+          <img src="https://www.teahub.io/photos/full/276-2763842_cardio-workout-full-hd-gym-workout-hd.jpg?q=80&w=1200&auto=format&fit=crop" alt="Mulher fazendo cardio" />
+          <h3>Cardio</h3>
+          <p>Esteiras, bikes e elípticos para melhorar condicionamento e resistência.</p>
+        </article>
+        <article class="card">
+            <img src="https://loja.performancenutrition.com.br/wp-content/uploads/2022/05/hl-4126241286-1-852x565.jpg?q=80&w=1200&auto=format&fit=crop" alt="Treino funcional em grupo" />
+          <h3>Funcional</h3>
+          <p>Aulas dinâmicas em grupo para performance, força e mobilidade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section section-alt">
+    <div class="container contact">
+      <h2 class="section-title">Fale Conosco</h2>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada!');">
+        <label>
+          <span>Nome</span>
+          <input type="text" required />
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" required />
+        </label>
+        <label class="full">
+          <span>Mensagem</span>
+          <textarea rows="4" required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Simplifit Academias. Todos os direitos reservados.</p>
+      <ul class="social">
+        <li>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9Zm5.5-2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13 22v-8h3l1-3h-4V8.5A1.5 1.5 0 0 1 14.5 7H17V4h-2.5A4.5 4.5 0 0 0 10 8.5V11H7v3h3v8h3Z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.52 3.48A11.94 11.94 0 0 0 12.02 0C5.42 0 .04 5.37.04 12c0 2.12.55 4.16 1.6 5.98L0 24l6.18-1.62a11.96 11.96 0 0 0 5.84 1.5h.01c6.6 0 11.98-5.37 11.98-12 0-3.2-1.25-6.21-3.5-8.4ZM12.03 21.5h-.01a9.97 9.97 0 0 1-5.08-1.39l-.36-.21-3.67.96.98-3.58-.24-.37A9.97 9.97 0 0 1 2.03 12c0-5.5 4.48-9.97 10-9.97 2.67 0 5.18 1.04 7.07 2.92a9.86 9.86 0 0 1 2.92 7.05c0 5.5-4.48 9.5-9.99 9.5Zm5.1-7.38c-.28-.14-1.66-.82-1.92-.91-.26-.1-.45-.14-.64.14-.19.27-.74.91-.9 1.09-.17.18-.33.2-.62.07-.28-.14-1.2-.44-2.28-1.41-.84-.75-1.41-1.67-1.58-1.95-.17-.27-.02-.42.12-.56.13-.13.28-.34.42-.51.14-.17.19-.27.28-.46.09-.18.04-.34-.01-.48-.06-.14-.64-1.55-.88-2.12-.23-.55-.47-.47-.64-.48l-.55-.01c-.19 0-.49.07-.75.34-.26.27-1 1-1 2.43s1.02 2.82 1.17 3.02c.14.19 2 3.05 4.85 4.28.68.29 1.21.46 1.62.58.68.22 1.3.19 1.78.12.54-.08 1.66-.68 1.9-1.33.24-.65.24-1.21.17-1.33-.07-.12-.25-.19-.53-.33Z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a class="to-top" href="#home" aria-label="Voltar ao topo">↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
