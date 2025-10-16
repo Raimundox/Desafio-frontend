@@ -21,6 +21,29 @@ themeBtn.addEventListener('click', () => {
   setPressed();
 });
 
+// Prevent horizontal scroll on mobile
+function preventHorizontalScroll() {
+  let startX = 0;
+  let startY = 0;
+  
+  document.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  
+  document.addEventListener('touchmove', (e) => {
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = Math.abs(currentX - startX);
+    const diffY = Math.abs(currentY - startY);
+    
+    // If horizontal movement is greater than vertical, prevent it
+    if (diffX > diffY && !nav.classList.contains('open')) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+}
+
 // Mobile nav
 const menuToggle = $('#menuToggle');
 const nav = $('#main-nav');
@@ -109,4 +132,7 @@ function createSlider(rootEl) {
 
 // Init slider(s)
 $$('.slider').forEach(createSlider);
+
+// Initialize horizontal scroll prevention
+preventHorizontalScroll();
 
