@@ -2,6 +2,8 @@
 
 Projeto entregue em HTML/CSS/JS puro (sem UI kits). O layout usa uma paleta inspirada na Simplifit: vermelho, cinza escuro e branco. Inclui cabeçalho responsivo, menu mobile, hero com slider, seção de serviços, contato, rodapé e alternância de tema claro/escuro com persistência.
 
+<a href="https://desafiof.netlify.app/"><strong>➥ Live Demo</strong></a>
+
 ## Como rodar
 Abra `index.html` em qualquer navegador moderno. Não há dependências.
 

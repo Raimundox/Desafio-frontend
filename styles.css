@@ -32,6 +32,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container {
@@ -51,6 +52,9 @@ body {
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 0;
+}
+.header-right {
+  display: flex; align-items: center; gap: 12px;
 }
 .brand { display: inline-flex; gap: 10px; align-items: center; text-decoration: none; color: inherit; }
 .brand-mark {
@@ -172,6 +176,8 @@ body {
     z-index: 60; 
     border-left: 1px solid var(--color-border);
     box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .main-nav.open { transform: translateX(0); }
   .main-nav ul { 
